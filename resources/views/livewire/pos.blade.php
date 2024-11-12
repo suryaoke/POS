@@ -9,12 +9,12 @@
                 @foreach ($products as $item)
                     <div wire:click="addToOrder({{ $item->id }})"
                         class="bg-gray-100 dark:bg-gray-700 p-4 rounded-lg shadow cursor-pointer">
-                        <img src="{{ $item->image }}" alt="Product Image"
+                        <img src="{{ $item->image_url }}" alt="Product Image"
                             class="w-full h-16 object-cover rounded-lg mb-2">
                         <h3 class="text-sm font-semibold">{{ $item->name }}</h3>
                         <p class="text-gray-600 dark:text-gray-400 text-xs">Rp.
                             {{ number_format($item->price, 0, ',', '.') }}</p>
-                        <p class="text-gray-600 dark:text-gray-400 text-xs">Stok: {{ $item->stock }}</p>
+                        <p class="text-gray-600 dark:text-gray-400 text-xs">Stok: {{ $item->stok }}</p>
                     </div>
                 @endforeach
 
